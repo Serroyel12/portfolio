@@ -3,339 +3,137 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rodrigo Caravaca Ruiz · Portfolio</title>
-  <meta name="description" content="Portfolio y CV online de Rodrigo Caravaca Ruiz (Ingeniería Informática). Proyectos, habilidades y contacto." />
-
+  <title>Rodrigo Caravaca Ruiz · Portfolio Ingeniero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background blobs -->
   <div class="bg-blobs" aria-hidden="true">
     <span class="blob blob-a"></span>
     <span class="blob blob-b"></span>
-    <span class="blob blob-c"></span>
   </div>
 
-  <!-- Navbar -->
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Inicio">
+    <a class="brand" href="#top">
       <span class="brand-dot"></span>
-      <span>Rodrigo</span>
+      <span>Rodrigo Caravaca</span>
     </a>
-
     <nav class="nav-links" id="navLinks">
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#habilidades">Habilidades</a>
+      <a href="#habilidades">Conocimientos</a>
       <a href="#experiencia">Experiencia</a>
-      <a href="#educacion">Educación</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
     <div class="nav-actions">
-      <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema">🌙</button>
-      <button class="icon-btn burger" id="burgerBtn" type="button" aria-label="Abrir menú">☰</button>
+      <button class="icon-btn" id="themeBtn">🌙</button>
+      <button class="icon-btn burger" id="burgerBtn">☰</button>
     </div>
   </header>
 
-  <!-- Main -->
   <main id="top" class="container">
-    <!-- HERO -->
-    <section class="hero">
+    
+    <section class="hero reveal">
       <div class="hero-left">
         <div class="pill">
           <span class="ping"></span>
-          <span>Disponible para prácticas / junior</span>
+          <span>4º Ingeniería Informática (UCAM)</span>
         </div>
-
-        <h1>
-          Rodrigo Caravaca Ruiz
-          <span class="muted">· Ingeniería Informática</span>
-        </h1>
-
-        <p class="lead">
-          Estudiante de último año con enfoque en desarrollo web y pasión por la IA.
-          Me gusta construir soluciones prácticas, claras y mantenibles.
-        </p>
-
+        <h1>Rodrigo Caravaca <br><span class="muted">Software & IA</span></h1>
+        <p class="lead">Especializado en construir soluciones robustas, desde backend en Java/C++ hasta modelos de Inteligencia Artificial con TensorFlow.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#contacto">Contactar</a>
+          <a class="btn primary" href="#contacto">Hablemos</a>
           <a class="btn" href="CV_RodrigoCaravacaRuiz.pdf" download>Descargar CV</a>
         </div>
-
         <div class="social-row">
-          <a class="chip" href="https://www.linkedin.com/in/rodrigo-caravaca-1a421b3b2/" target="_blank" rel="noreferrer">LinkedIn</a>          <a class="chip" href="https://github.com/Serroyel12" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chip" href="mailto:rodrigocaravacaruiz12@gmail.com">Email</a>
-        </div>
-
-        <div class="metrics">
-          <div class="metric">
-            <div class="metric-num">4º</div>
-            <div class="metric-label">Curso (UCAM)</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">Web</div>
-            <div class="metric-label">WordPress / Front</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">IA</div>
-            <div class="metric-label">TensorFlow / OpenCV</div>
-          </div>
+          <a class="chip" href="https://github.com/Serroyel12" target="_blank">GitHub</a>
+          <a class="chip" href="https://www.linkedin.com/in/rodrigo-caravaca-1a421b3b2/" target="_blank">LinkedIn</a>
         </div>
       </div>
 
       <aside class="hero-card">
         <div class="avatar">
-          <img src="assets/avatar.jpg" alt="Foto de Rodrigo" />
+          <img src="assets/avatar.jpg" alt="Rodrigo Caravaca">
         </div>
-
-        <div class="card-block">
-          <h2 class="card-title">Resumen</h2>
-          <p class="card-text">
-            Formación sólida en software y experiencia práctica en entornos web.
-            Motivado por aprendizaje continuo y resolución de problemas, con interés en IA.
-          </p>
-        </div>
-
-        <div class="card-block">
-          <h2 class="card-title">Stack</h2>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">PHP</span>
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">SQL</span>
-            <span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Git</span><span class="tag">Linux</span>
-          </div>
-        </div>
+        <h3>Ingeniero en formación</h3>
+        <p class="small muted">Murcia, España</p>
       </aside>
     </section>
 
-    <!-- SOBRE MI -->
-    <section id="sobre-mi" class="section">
+    <section id="habilidades" class="section reveal">
       <div class="section-head">
-        <h2>Sobre mí</h2>
-        <p>Perfil, enfoque y lo que aporto.</p>
+        <h2>Especialización Técnica</h2>
+        <p>Dominio de múltiples lenguajes y entornos de ingeniería.</p>
       </div>
-
-      <div class="grid two">
-        <article class="card">
-          <h3>Cómo trabajo</h3>
-          <ul class="list">
-            <li>Me centro en soluciones simples y escalables.</li>
-            <li>Me gusta entender el problema y medir resultados.</li>
-            <li>Documentación y código limpio para que sea mantenible.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Objetivo</h3>
-          <p>
-            Seguir creciendo en desarrollo web/software y aplicar IA en proyectos reales,
-            aportando valor con automatización, visión por computador o análisis de datos.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="section">
-      <div class="section-head">
-        <h2>Habilidades</h2>
-        <p>Lo que uso en mi día a día.</p>
-      </div>
-
       <div class="grid three">
-        <article class="card">
-          <h3>Lenguajes</h3>
+        <article class="card skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Software & Backend</h3>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C#</span>
-            <span class="tag">PHP</span><span class="tag">Ensamblador</span>
+            <span class="tag">Java</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Python</span><span class="tag">PHP</span><span class="tag">Ensamblador</span>
           </div>
         </article>
-
-        <article class="card">
+        <article class="card skill-card">
+          <div class="skill-icon">🧠</div>
           <h3>IA y Datos</h3>
           <div class="tags">
-            <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">NumPy</span>
-            <span class="tag">OpenCV</span><span class="tag">Matplotlib</span>
+            <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Streamlit</span>
           </div>
         </article>
-
-        <article class="card">
+        <article class="card skill-card">
+          <div class="skill-icon">🌐</div>
           <h3>Web y BBDD</h3>
           <div class="tags">
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-            <span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">WordPress</span>
+            <span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">HTML/CSS</span><span class="tag">WordPress</span>
           </div>
-        </article>
-
-        <article class="card">
-          <h3>Herramientas</h3>
-          <div class="tags">
-            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
-            <span class="tag">Linux</span><span class="tag">Google Colab</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Idiomas</h3>
-          <div class="tags">
-            <span class="tag">Castellano · Nativo</span>
-            <span class="tag">Inglés · Básico</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Soft skills</h3>
-          <ul class="list">
-            <li>Adaptación</li>
-            <li>Trabajo en equipo</li>
-            <li>Resolución de problemas</li>
-            <li>Aprendizaje rápido</li>
-          </ul>
         </article>
       </div>
     </section>
 
-    <!-- EXPERIENCIA -->
-    <section id="experiencia" class="section">
+    <section id="proyectos" class="section reveal">
       <div class="section-head">
-        <h2>Experiencia</h2>
-        <p>Lo que he hecho en entornos reales.</p>
+        <h2>Proyectos Destacados</h2>
       </div>
-
-      <div class="timeline">
-        <div class="t-item card">
-          <div class="t-top">
-            <h3>Desarrollador Web en Prácticas</h3>
-            <span class="badge">2022 · Murcia</span>
-          </div>
-          <div class="t-sub">Gestión web</div>
-          <ul class="list">
-            <li>Mantenimiento y personalización de sitios con WordPress.</li>
-            <li>Apoyo en análisis y resolución de incidencias técnicas.</li>
-            <li>Desarrollo de aplicaciones siguiendo estándares web.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCACIÓN -->
-    <section id="educacion" class="section">
-      <div class="section-head">
-        <h2>Educación</h2>
-        <p>Formación académica.</p>
-      </div>
-
-      <div class="grid two">
-        <article class="card">
-          <h3>Grado en Ingeniería Informática</h3>
-          <div class="muted">UCAM · 2022–2026 · Murcia</div>
-          <p>4º curso. Interés especial en IA y desarrollo de soluciones innovadoras.</p>
-        </article>
-
-        <article class="card">
-          <h3>Técnico en Desarrollo de Aplicaciones con Tecnología Web</h3>
-          <div class="muted">Aliad Conocimiento y Servicio SL · 2022 · Murcia</div>
-          <p>Base sólida en desarrollo web y prácticas orientadas a proyectos.</p>
-        </article>
-
-        <article class="card">
-          <h3>Bachillerato en Ciencias y Tecnología</h3>
-          <div class="muted">IES Infante Don Juan Manuel · 2019–2021 · Murcia</div>
-          <p>Fundamentos técnicos y científicos.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="section">
-      <div class="section-head">
-        <h2>Proyectos</h2>
-        <p>Repos reales de GitHub (con enlace directo).</p>
-      </div>
-
       <div class="grid three">
-        <article class="card project">
-          <h3>GameHub · Plataforma de videojuegos</h3>
-          <p class="muted">
-            Plataforma de videojuegos en construcción: base de catálogo, navegación y estructura para escalar la parte online.
-          </p>
-          <div class="tags">
-            <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn small" href="https://github.com/Serroyel12/gamehub" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+        <article class="card project-card">
+          <h3>GameHub</h3>
+          <p class="small muted">Plataforma de catálogo de videojuegos escalable.</p>
+          <div class="tags"><span class="tag">JS</span><span class="tag">Web</span></div>
+          <a class="btn small" href="https://github.com/Serroyel12/gamehub" target="_blank">GitHub</a>
         </article>
-
-        <article class="card project">
-          <h3>RestDad2 · API REST (DAD2)</h3>
-          <p class="muted">
-            Práctica de Desarrollo de Aplicaciones Distribuidas: proyecto orientado a servicios REST y consumo desde cliente.
-          </p>
-          <div class="tags">
-            <span class="tag">Java</span><span class="tag">REST</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn small" href="https://github.com/Serroyel12/RestDad2" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+        <article class="card project-card">
+          <h3>Sistema Experto</h3>
+          <p class="small muted">Recomendador de combate Pokémon basado en IA.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">IA</span></div>
+          <a class="btn small" href="https://github.com/Serroyel12/sistema-experto-pokemon" target="_blank">GitHub</a>
         </article>
-
-        <article class="card project">
-          <h3>Sistema experto Pokémon · Recomendador</h3>
-          <p class="muted">
-            Sistema experto para recomendar el mejor movimiento en combate Pokémon. Implementación tipo app con Streamlit.
-          </p>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">Streamlit</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn small" href="https://github.com/Serroyel12/sistema-experto-pokemon" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+        <article class="card project-card">
+          <h3>RestDad2</h3>
+          <p class="small muted">Desarrollo de API REST distribuida en Java.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">API</span></div>
+          <a class="btn small" href="https://github.com/Serroyel12/RestDad2" target="_blank">GitHub</a>
         </article>
-      </div>
-
-      <div style="margin-top:14px">
-        <a class="btn" href="https://github.com/Serroyel12" target="_blank" rel="noreferrer">Ver más en GitHub →</a>
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="section-head">
-        <h2>Contacto</h2>
-        <p>Rápido, directo, profesional.</p>
-      </div>
-
-      <div class="grid two">
-        <article class="card">
-          <h3>Hablemos</h3>
-          <p class="muted">Respondo rápido por email.</p>
-          <div class="contact-row">
-            <a class="btn primary" href="mailto:rodrigocaravacaruiz12@gmail.com">Enviar email</a>
-            <button class="btn" id="copyEmailBtn" type="button">Copiar email</button>
-          </div>
-          <p class="small muted" id="copyMsg" aria-live="polite"></p>
-        </article>
-
-        <article class="card">
-          <h3>Links</h3>
-          <div class="links">
-            <a href="https://www.linkedin.com/in/rodrigo-caravaca-1a421b3b2/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/Serroyel12" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-          <p class="small muted">Tip: añade también demos cuando despliegues GameHub o Streamlit.</p>
-        </article>
+    <section id="contacto" class="section reveal">
+      <div class="card contact-banner">
+        <h2>¿Hablamos de tecnología?</h2>
+        <p>Busco prácticas curriculares o mi primer empleo como Ingeniero Junior.</p>
+        <div class="contact-row">
+          <a class="btn primary" href="mailto:rodrigocaravacaruiz12@gmail.com">Enviar Email</a>
+          <button class="btn" id="copyEmailBtn">Copiar Email</button>
+        </div>
+        <p id="copyMsg" class="small"></p>
       </div>
     </section>
 
     <footer class="footer">
       <span>© <span id="year"></span> Rodrigo Caravaca Ruiz</span>
-      <a href="#top">Volver arriba ↑</a>
+      <a href="#top">Arriba ↑</a>
     </footer>
   </main>
 

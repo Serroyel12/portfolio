@@ -1,62 +1,56 @@
+// Año dinámico
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Intersection Observer para revelación de secciones
+const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Manejo de Tema (Oscuro/Claro)
 const root = document.documentElement;
-const yearEl = document.getElementById("year");
 const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+  const currentTheme = root.getAttribute("data-theme") || "dark";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", newTheme);
+  themeBtn.textContent = newTheme === "dark" ? "🌙" : "☀️";
+  localStorage.setItem("portfolio-theme", newTheme);
+});
+
+// Cargar tema guardado
+if(localStorage.getItem("portfolio-theme") === "light") {
+  root.setAttribute("data-theme", "light");
+  themeBtn.textContent = "☀️";
+}
+
+// Menú Hamburguesa (Mobile)
 const burgerBtn = document.getElementById("burgerBtn");
 const navLinks = document.getElementById("navLinks");
 
+burgerBtn.addEventListener("click", () => {
+  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+  navLinks.classList.toggle("mobile-open");
+});
+
+// Copiar Email
 const copyBtn = document.getElementById("copyEmailBtn");
 const copyMsg = document.getElementById("copyMsg");
 const email = "rodrigocaravacaruiz12@gmail.com";
 
-yearEl.textContent = new Date().getFullYear();
-
-// Theme (persist)
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) root.setAttribute("data-theme", savedTheme);
-setThemeIcon();
-
-themeBtn.addEventListener("click", () => {
-  const current = root.getAttribute("data-theme") || "dark";
-  const next = current === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-  setThemeIcon();
-});
-
-function setThemeIcon(){
-  const current = root.getAttribute("data-theme") || "dark";
-  themeBtn.textContent = current === "dark" ? "🌙" : "☀️";
-}
-
-// Mobile menu
-burgerBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-
-// Close menu when clicking a link (mobile)
-navLinks.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => navLinks.classList.remove("open"));
-});
-
-// Copy email
 copyBtn?.addEventListener("click", async () => {
-  try{
+  try {
     await navigator.clipboard.writeText(email);
-    copyMsg.textContent = "Email copiado ✅";
-    setTimeout(() => (copyMsg.textContent = ""), 1800);
-  }catch{
-    copyMsg.textContent = "No se pudo copiar. Selecciónalo manualmente: " + email;
+    copyMsg.textContent = "✅ ¡Email copiado!";
+    setTimeout(() => copyMsg.textContent = "", 2000);
+  } catch {
+    copyMsg.textContent = "Error al copiar";
   }
-});
-
-// Smooth offset for anchor clicks (fixed nav)
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", (e) => {
-    const id = link.getAttribute("href");
-    const target = document.querySelector(id);
-    if (!target) return;
-    e.preventDefault();
-    const y = target.getBoundingClientRect().top + window.scrollY - 78;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  });
 });
